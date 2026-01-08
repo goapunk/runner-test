@@ -23,11 +23,15 @@ jobs:
 
       - name: Upgrade pip, setuptools, wheel
         run: |
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip setuptools wheel requests
 
       - name: Dependency review
         if: github.event_name == 'pull_request'
         uses: actions/dependency-review-action@v4
+
+      - name: Typosquatting check
+        if: github.event_name == 'pull_request'
+        run: python .github/scripts/typosquat_checker.py
 
       - name: Install dependencies
         run: |
