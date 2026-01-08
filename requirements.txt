@@ -1,2 +1,2 @@
 cowsay==6.1
-requests==2.32.5
+requestss==2.32.5
