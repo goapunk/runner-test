@@ -4,7 +4,7 @@ setup(
     name="runner",
     version="0.1.0",
     description="Runner Test demo",
-    packages=find_packages(),
+    py_modules=["app"],
     python_requires=">=3.8",
 )
 
