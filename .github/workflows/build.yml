@@ -18,8 +18,4 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel build
           pip install -r requirements.txt
           python -m build
-      - name: Upload distributions
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-dists
-          path: dist/
+          python app.py
